@@ -5,6 +5,8 @@ import 'package:dice_app/widgets/interactive_image.dart';
 import 'package:dice_app/widgets/styled_button.dart';
 import 'package:flutter/material.dart';
 
+final Random randomizer = Random();
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -19,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   void _rollDice() {
     setState(() {
-      _diceNumber = Random().nextInt(6) + 1;
+      _diceNumber = randomizer.nextInt(6) + 1;
       _isRolling = true;
       _showResult = true;
     });
