@@ -5,7 +5,7 @@ Proyecto de prueba para el curso de Flutter de Udemy.
 ## Capturas de pantalla
 
 ![Estado Inicial](https://raw.githubusercontent.com/SRobles97/dice_app/master/assets/screenshots/img_1.png
-=250x)
+=x250)
 
 ![Estado Final](https://raw.githubusercontent.com/SRobles97/dice_app/master/assets/screenshots/img.png
-=250x)
+=x250)
