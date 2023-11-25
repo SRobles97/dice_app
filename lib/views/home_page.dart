@@ -13,17 +13,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String _diceImage = 'dice-2.png';
-  bool _isRolling = false;
   int _diceNumber = 2;
+  bool _isRolling = false;
   bool _showResult = false;
 
   void _rollDice() {
-    final random = Random();
-    final randomNumber = random.nextInt(6) + 1;
     setState(() {
-      _diceImage = 'dice-$randomNumber.png';
-      _diceNumber = randomNumber;
+      _diceNumber = Random().nextInt(6) + 1;
       _isRolling = true;
       _showResult = true;
     });
@@ -46,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InteractiveImage(
-              image: _diceImage,
+              image: 'dice-$_diceNumber.png',
               width: 200,
               onPressed: _rollDice,
               isAnimated: _isRolling),
